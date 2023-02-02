@@ -6,7 +6,6 @@ import Button from "./Button";
 function App() {
   function handleClick(title) {
     console.log("Button: " + title);
-    alert("Hej");
   }
 
   const buttons = [
