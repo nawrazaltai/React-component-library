@@ -1,13 +1,5 @@
 export default function Button(props) {
-  const {
-    title,
-    id,
-    color,
-    size,
-    onDismiss,
-    onClick,
-    disabled = false,
-  } = props;
+  const { title, id, color, size, onClick, disabled = false } = props;
 
   const styles = {
     color: {
@@ -34,7 +26,7 @@ export default function Button(props) {
   return (
     <button
       onClick={() => {
-        onDismiss(id);
+        onClick(id);
       }}
       className={`${colorClass} ${sizeClass} ${
         disabled ? disabledClass : ""

@@ -19,7 +19,7 @@ export default function Alerts(props) {
   //   };
 
   return (
-    <div>
+    <div className="">
       <div className={active ? "flex flex-col m-5" : "hidden"}>
         <div
           className={`${colorClass} flex justify-center rounded-t-md p-5 pb-3 text-6xl text-slate-100`}
@@ -27,8 +27,10 @@ export default function Alerts(props) {
           {icon}
         </div>
         <div className="flex flex-col h-48 px-5 pt-3 rounded-b-md items-center text-slate-900 bg-gray-200 justify-around">
-          <h2 className="font-bold tracking-widest text-2xl">{message}</h2>
-          <span className="tracking-wider pb-10">{description}</span>
+          <h2 className="font-bold tracking-widest text-2xl ">{message}</h2>
+          <span className="tracking-wider pb-10 whitespace-nowrap">
+            {description}
+          </span>
 
           {/* Egen knapp */}
           {/* <button
@@ -40,12 +42,7 @@ export default function Alerts(props) {
           </button> */}
 
           {/* Återanvänd knapp-komponent */}
-          <Button
-            title={btnTitle}
-            color={color}
-            id={id}
-            onDismiss={onDismiss}
-          />
+          <Button title={btnTitle} color={color} id={id} onClick={onDismiss} />
         </div>
       </div>
     </div>
