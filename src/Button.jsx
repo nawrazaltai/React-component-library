@@ -13,7 +13,7 @@ export default function Button(props) {
         "bg-red-500 text-base px-10 py-1 text-slate-100 font-semibold rounded-full hover:bg-slate-100 hover:text-red-600  hover:border-red-600",
     },
     size: {
-      small: "text-sm p-4",
+      small: "text-sm py-2 px-4",
       base: "text-base p-5",
       large: "text-lg p-7",
     },

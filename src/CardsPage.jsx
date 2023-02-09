@@ -13,7 +13,7 @@ export default function CardsPage() {
   ];
 
   return (
-    <div className=" flex justify-center p-5 w-screen h-screen bg-slate-500">
+    <div className=" flex justify-center p-5 w-full h-screen bg-slate-500 overflow-hidden overscroll-contain">
       {cards.map((card) => {
         return (
           <Card

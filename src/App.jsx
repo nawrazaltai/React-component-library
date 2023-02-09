@@ -4,25 +4,30 @@ import AlertsPage from "./AlertsPage";
 import BadgesPage from "./BadgesPage";
 import CardsPage from "./CardsPage";
 import Home from "./Home";
-import { Outlet, Route, Routes, Link, NavLink } from "react-router-dom";
+import { Outlet, Route, Routes, NavLink } from "react-router-dom";
+import ModalPage from "./ModalPage";
+import { MdLocalLibrary } from "react-icons/md";
 
 function App() {
-  const activeStyle = { textDecoration: "underline", color: "orange" };
+  const activeStyle = { color: "orange" };
 
   return (
-    <>
-      <nav className="flex w-screen h-32 border-b-4 items-center px-5 text-white justify-between border-white  bg-slate-900">
+    <div className="h-full">
+      <nav className="flex w-full h-28 border-b-4 items-center px-5 text-white justify-between border-white  bg-slate-900">
         <h1 className="text-xl">
           <NavLink
+            className={"flex items-center gap-1 hover:text-orange-300"}
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
             to={"/"}
           >
-            Home
+            <MdLocalLibrary className="text-4xl" />
+            Component Library
           </NavLink>
         </h1>
         <ul className="flex gap-6 items-center ">
           <li>
             <NavLink
+              className={"hover:text-orange-300"}
               style={({ isActive }) => (isActive ? activeStyle : undefined)}
               to={"/buttonspage"}
             >
@@ -31,6 +36,7 @@ function App() {
           </li>
           <li>
             <NavLink
+              className={"hover:text-orange-300"}
               style={({ isActive }) => (isActive ? activeStyle : undefined)}
               to={"/alertspage"}
             >
@@ -39,6 +45,7 @@ function App() {
           </li>
           <li>
             <NavLink
+              className={"hover:text-orange-300"}
               style={({ isActive }) => (isActive ? activeStyle : undefined)}
               to={"/badgespage"}
             >
@@ -47,10 +54,20 @@ function App() {
           </li>
           <li>
             <NavLink
+              className={"hover:text-orange-300"}
               style={({ isActive }) => (isActive ? activeStyle : undefined)}
               to={"/cardspage"}
             >
               Cards
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={"hover:text-orange-300"}
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+              to={"/modalpage"}
+            >
+              Modal
             </NavLink>
           </li>
         </ul>
@@ -63,8 +80,9 @@ function App() {
         <Route path="/alertspage" element={<AlertsPage />}></Route>
         <Route path="/badgespage" element={<BadgesPage />}></Route>
         <Route path="/cardspage" element={<CardsPage />}></Route>
+        <Route path="modalpage" element={<ModalPage />}></Route>
       </Routes>
-    </>
+    </div>
   );
 }
 

@@ -47,7 +47,7 @@ export default function AlertsPage() {
   }
 
   return (
-    <div className="flex border-b-2 border-b-white items-top justify-center bg-slate-500 h-screen w-screen">
+    <div className="flex border-b-2 border-b-white items-top justify-center bg-slate-500 h-screen w-full">
       {alerts.map((alert) => {
         return <Alerts key={alert.id} {...alert} onDismiss={handleDismiss} />;
       })}

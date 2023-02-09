@@ -30,7 +30,7 @@ export default function ButtonsPage() {
   ];
 
   return (
-    <div className="flex flex-col bg-slate-500 w-screen h-screen">
+    <div className="flex flex-col bg-slate-500 w-full h-screen">
       <div className="flex items-center justify-center h-24 gap-5 mt-4">
         {buttons.map((button) => {
           return (
