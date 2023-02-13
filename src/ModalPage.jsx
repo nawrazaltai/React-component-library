@@ -29,15 +29,6 @@ export default function ModalPage() {
   }
 
   return (
-    // <div className="bg-slate-500 h-screen">
-    //   {/* {
-    //     <Modal show={show} toggleModal={toggleModal}>
-    //       <Modal.ModalHeader onClose={onClose} />
-    //       <Modal.ModalBody />
-    //       <Modal.ModalFooter onClose={onClose} />
-    //     </Modal>
-    //   } */}
-    // </div>
     <div className="bg-slate-500 h-screen">
       {modals.map((modal) => {
         return (

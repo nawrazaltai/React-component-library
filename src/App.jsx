@@ -3,6 +3,7 @@ import ButtonsPage from "./ButtonsPage";
 import AlertsPage from "./AlertsPage";
 import BadgesPage from "./BadgesPage";
 import CardsPage from "./CardsPage";
+import AccordionPage from "./AccordionPage";
 import Home from "./Home";
 import { Outlet, Route, Routes, NavLink } from "react-router-dom";
 import ModalPage from "./ModalPage";
@@ -70,10 +71,18 @@ function App() {
               Modal
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              className={"hover:text-orange-300"}
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+              to={"/accordionpage"}
+            >
+              Accordion
+            </NavLink>
+          </li>
         </ul>
       </nav>
       <Outlet />
-
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/buttonspage" element={<ButtonsPage />}></Route>
@@ -81,6 +90,7 @@ function App() {
         <Route path="/badgespage" element={<BadgesPage />}></Route>
         <Route path="/cardspage" element={<CardsPage />}></Route>
         <Route path="modalpage" element={<ModalPage />}></Route>
+        <Route path="accordionpage" element={<AccordionPage />}></Route>
       </Routes>
     </div>
   );
