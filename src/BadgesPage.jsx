@@ -21,7 +21,7 @@ export default function BadgesPage() {
     },
   ];
   return (
-    <div className="flex items-start justify-center border-b-2 border-white h-screen w-screen bg-slate-500">
+    <div className="flex items-start justify-center h-screen w-full bg-slate-500">
       {badges.map((badge) => {
         return (
           <Badges

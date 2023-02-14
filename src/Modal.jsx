@@ -17,7 +17,7 @@ export default function Modal(props) {
   const sizeClass = styles.size[size];
 
   return (
-    <div className="h-screen relative flex justify-center items-start">
+    <div className="h-screen  flex justify-center items-start">
       {/* <button
         className={`border-2 p-2 z-0 mt-5 w-32 rounded-md bg-slate-800 text-white`}
         onClick={openModal}
